@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to top,rgba(245, 236, 252, -0.6), rgb(1, 27, 27)),url(./image/form\ background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.nav{
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39,1), transparent);
+    z-index: 100;
+}
+.logo p{
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 600;
+}
+.menu ul{
+    display: flex;
+}
+.menu ul li{
+    list-style-type: none;
+}
+.menu .active{
+    text-decoration: none;
+    font-weight: 500;
+    color: aliceblue;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+.link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #ffffff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+.link:hover, .active{
+    border-bottom: 2px solid white;
+}
+.btn{
+    width: 9.2rem;
+    height: 40px;
+    font-weight: 500;
+    background: #338a8a;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+#regBtn{
+    margin-left: 15px;
+}
+.log{
+    background: #40b7b7;
+}
+.btn:hover{
+    background: #8fcbcc;
+}
+.btn-menu{
+    display: none;
+}
+.form-con{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 512px;
+    height: 420px;
+    overflow: hidden;
+    z-index: 2;
+}
+.log-container{
+    position: absolute;
+    left: 4px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+    backdrop-filter: blur(2px);
+}
+.reg-container{
+    backdrop-filter: blur(2px);
+    position: absolute;
+    right: -520px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+.top span{
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+}
+.top span a{
+    font-weight: 500;
+    color: white;
+    margin-left: 5px;
+}
+ header{
+    font-size: 30px;
+    color:white;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+.two-form{
+    display: flex;
+    gap: 10px;
+}
+.input-field{
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: 15px;
+    background: #ffffff33;
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 45px;
+    transition: .2s;
+}
+.input-field:hover, .input-field:focus{
+    background: #ffffff40;
+    box-shadow: 1px 5px 7px #8fcbcc;
+}
+::-webkit-input-placeholder{
+    color: #fff;
+}
+.input-space i{
+    position: relative;
+    top: -35px;
+    left: 17px;
+    color: #fff;
+}
+.submit{
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    width: 100%;
+    height: 50px;
+    background: #338a8a;
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.submit:hover{
+    background: #17161640;
+    box-shadow: 1px 5px 7px #8fcbcc;
+}
+.two-col{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.two-col .one{
+    display: flex;
+    gap: 5px;
+}
+.two label a{
+    text-decoration: none;
+    color: #fff;
+}
+.two label a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 841px){
+    .nav-button{
+        display: none;
+    }
+    .menu.res{
+        top: 100px;
+    }
+    .menu{
+        position: absolute;
+        top: -800px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 95vh;
+        backdrop-filter: blur(20px);
+        list-style-type: none;
+    }
+    .menu ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    .btn-menu{
+        display: block;
+        margin-right: -90px;
+        margin-top: 4px;
+    }
+    .btn-menu i{
+        font-size: 30px;
+        background: rgba(22, 198, 201, 0.3);
+        color: #fff;
+        padding: 5px;
+        border-radius: 50%;
+        cursor: pointer;
+}
+    .btn-menu i:hover{
+        background: rgba(255, 255, 255, 0.15);
+
+    }
+}
+@media only screen and (max-width:530px){
+    .logo p{
+        margin-left: -40px;
+        text-decoration: underline;
+        font-size: 20px;
+    }
+    .wrapper{
+        min-height: 100vh;
+    }
+    .form-con{
+        width: 100%;
+        height: 600px;
+    }
+    .log-container, .reg-container{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .btn-menu{
+        display: block;
+        margin-right: -60px;
+    }
+    .two-form{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+}
